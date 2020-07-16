@@ -4,59 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/noticeBoard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <title>Notice | Pragati Classes</title>
   </head>
   <body>
-    <p class="heading">Notice Board</p>
-    <div class="container">
-      <div class="container1">
-        <div class="who">Students</div>
-        <div class="student-notice">
-          <div class="new-gif">
-            <img src="./assets/gif/tnew.gif" alt="" />
+  <div class="logo-section">
+      <div class="logo">
+          <div>
+              <img class="logoimg" src="./assets/images/logo1.jpeg" >
           </div>
-          &nbsp; &nbsp; &nbsp;
-          <div class="content">
-            <a class="notice" href="#">
-              Admission of first batch starting from 11th July</a
-            >
+          <div>
+              <h1 class="PC">
+                  Pragati Classes, Kalain
+              </h1>
           </div>
-        </div>
       </div>
-      <div class="container2">
-        <div class="who">For TCH staffs</div>
-        <div class="student-notice">
-          <div class="new-gif"></div>
-          &nbsp; &nbsp; &nbsp;
-          <div class="content">
-            <a class="notice" href="#"> No new notification</a>
-          </div>
+  </div>
+  <div class="ui main text container" class="main">
+    <div id="header"><h1 class="noticeboard">Notice Board</h1></div>
+    <div class="notice1">
+      <button class="who">Notice for Students</button>
+        <div class="content">
+          <p><img src="./assets/gif/tnew.gif"><a href="#">Addmission for first batch starting from 11th July</a></p>
         </div>
-      </div>
-      <div class="container3">
-        <div class="who">For MNG staffs</div>
-        <div class="student-notice">
-          <div class="new-gif"></div>
-          &nbsp; &nbsp; &nbsp;
-          <div class="content">
-            <a class="notice" href="#"> No new notification</a>
-          </div>
+      <button class="who">Notice for TCH staffs</button>
+        <div class="content">
+          <p><a href="#">No new notification</a></p>
         </div>
-      </div>
-      <div class="container4">
-        <div class="who">Others</div>
-        <div class="student-notice">
-          <div class="new-gif">
-            <img src="./assets/gif/tnew.gif" alt="" />
-          </div>
-          &nbsp; &nbsp; &nbsp;
-          <div class="content">
-            <a class="notice" href="#">
-              First batch admission starting from 11 July</a
-            >
-          </div>
+      <button class="who">Notice for MNG staffs</button>
+        <div class="content">
+          <p><a href="#">No new notification</a></p>
         </div>
-      </div>
+      <button class="who">Other Notices</button>
+        <div class="content">
+          <p><img src="./assets/gif/tnew.gif">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p><img src="./assets/gif/tnew.gif">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
     </div>
+  </div>
   </body>
+  <script>
+    var who=document.getElementsByClassName("who");
+    var i;
+      for (i = 0; i < who.length; i++) {
+        who[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+  </script>
 </html>
